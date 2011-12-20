@@ -1,6 +1,9 @@
 describe( 'summarize.js tests', function(){
-	it( 'should do something' , function(){
-		var summary = sum( corpus ) ;
-		console.log( summary );
-	}) ;
+	corpora.forEach( function (corpus) {
+		it( 'should calculate the summary', function () {
+			var actual = sum( corpus.text );
+			var expected = corpus.expected;
+			expect(actual).toEqual(	expected );
+		});
+	});
 }) ;
