@@ -1,6 +1,4 @@
-var stemmer = require( 'porter-stemmer' ).stemmer;
-var _ = require( 'underscore' );
-_.str = require( 'underscore.string' );
+//make sure that underscore.string is installed
 _.mixin( _.str.exports() );
 
 (function (_undef) {
@@ -159,6 +157,6 @@ _.mixin( _.str.exports() );
 	};
 	
 	//public api
-	module.exports = sum;
+	window.sum = sum ;
 
 }).call(this);

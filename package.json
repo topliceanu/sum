@@ -15,6 +15,7 @@
   "dependencies": {
     "underscore": "~1.2.2",
 	"underscore.string": "~2.0.0",
+	"porter-stemmer": "~0.9.1",
 	"vows": "~0.5.13"
   },
 }

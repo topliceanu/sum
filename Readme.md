@@ -48,6 +48,14 @@ Running tests
 Run /tests/specrunner.html in your favourite browser.
 Run node.js test with the command
 	
+TODO
+====
+1. add tests to verify the correctness of the actual output
+2. currenty the output does not preserve the ending chars of the original sentences
+3. make the lib more plugable: 
+- allow plugin of custom algorithms
+- better control for the length of the summary, by words, by letters
+4. make it work in the browser! Tests are already in the 
 
 Licence
 =======
