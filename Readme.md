@@ -1,17 +1,17 @@
-  _____                       _      
- / ____|                     (_)     
-| (___   _   _  _ __ ___      _  ___ 
- \___ \ | | | || '_ ` _ \    | |/ __|
- ____) || |_| || | | | | | _ | |\__ \
-|_____/  \__,_||_| |_| |_|(_)| ||___/
-                            _/ |     
-                           |__/      
+	  _____                       _      
+	 / ____|                     (_)     
+	| (___   _   _  _ __ ___      _  ___ 
+	 \___ \ | | | || '_ ` _ \    | |/ __|
+	 ____) || |_| || | | | | | _ | |\__ \
+	|_____/  \__,_||_| |_| |_|(_)| ||___/
+								_/ |     
+							   |__/      
 
-Summarize.js
+Sum.js
 ============
 
 A simple function for summarizing text e.g. for automatically determining the sentences that are most relevant to the context of the corpus.
-This library depends on the [underscore](http://documentcloud.github.com/underscore/) and [underscore.string](http://epeli.github.com/underscore.string/) for the moment
+This library depends on the [underscore](http://documentcloud.github.com/underscore/), [underscore.string](http://epeli.github.com/underscore.string/) and [porter-stemmer](https://github.com/jedp/porter-stemmer) for the moment
 
 Install in node.js
 ==================
@@ -19,21 +19,21 @@ Install in node.js
 
 Install in browser
 ==================
-	<script src="/js/underscore.js"></script>	
-	<script src="/js/underscore.string.js"></script>	
-	<script src="/js/sum.js"></script>
+	<script src="/lib/underscore.js"></script>	
+	<script src="/lib/underscore.string.js"></script>	
+	<script src="/lib/porter-stemmer.js"></script>
+	<script src="/sum.browser.js"></script>
 	
 
 Quick Start
 ===========
-	
 	var sum = require( 'sum' );
 	var bigString = "....";
 	var abstract = sum({ 'corpus': bigString });
+	
 
 Further Options
 ===============
-
 	var sum = require( 'sum' );
 	var anotherBigString = "...";
 	var abstract = sum({
@@ -43,19 +43,20 @@ Further Options
 		'emphasise': ['magic'] // forces sum.js to include in the summary the centences that contain the words specified by `emphasise` param.
 	});
 
+
 Running tests
 =============
 Run /tests/specrunner.html in your favourite browser.
 Run node.js test with the command
+
 	
 TODO
 ====
 1. add tests to verify the correctness of the actual output
 2. currenty the output does not preserve the ending chars of the original sentences
-3. make the lib more plugable: 
-- allow plugin of custom algorithms
-- better control for the length of the summary, by words, by letters
-4. make it work in the browser! Tests are already in the 
+3. make the lib more plugable, e.g allow plugin of custom algorithms, string cleaning rutines, etc.
+4. better control for the length of the summary, by words, by letters
+
 
 Licence
 =======
