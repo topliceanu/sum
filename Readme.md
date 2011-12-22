@@ -46,8 +46,8 @@ Further Options
 
 Running tests
 =============
-Run /tests/specrunner.html in your favourite browser.
-Run node.js test with the command
+Run /tests/browser/specrunner.html in your favourite browser.
+Run /tests/node/sum.js test with the command
 
 	
 TODO
