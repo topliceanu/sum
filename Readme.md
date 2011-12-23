@@ -47,7 +47,9 @@ Further Options
 Running tests
 =============
 Run /tests/browser/specrunner.html in your favourite browser.
+
 To run node tests, make sure you have vows installed and run
+
 	vows ./tests/node/sum.js 
 
 	
