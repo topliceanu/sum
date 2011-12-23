@@ -38,16 +38,17 @@ Further Options
 	var anotherBigString = "...";
 	var abstract = sum({
 		'corpus': anotherBigString, // `corpus` is the string you want to summarize
-		'nSentences': 3, // `nSentences` controls the number of sentences from the original from the original text included in the abstact
-		'exclude': ['polar', 'bear'], // sum.js allows you to exclude sentences that contain any of the words in the `exclude` array param
-		'emphasise': ['magic'] // forces sum.js to include in the summary the centences that contain the words specified by `emphasise` param.
+		'nSentences': 3, // `nSentences` controls the number of sentences from the original text included in the abstact
+		'exclude': ['polar', 'bear'], // sum.js allows you to exclude from the final abstract ALL sentences that contain any of the words in the `exclude` param
+		'emphasise': ['magic'] // forces sum.js to include in the summary the centences that contain any the words specified by `emphasise` param.
 	});
 
 
 Running tests
 =============
 Run /tests/browser/specrunner.html in your favourite browser.
-Run /tests/node/sum.js test with the command
+To run node tests, make sure you have vows installed and run
+	vows ./tests/node/sum.js 
 
 	
 TODO
