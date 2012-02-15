@@ -37,10 +37,30 @@ Further Options
 	var sum = require( 'sum' );
 	var anotherBigString = "...";
 	var abstract = sum({
-		'corpus': anotherBigString, // `corpus` is the string you want to summarize
-		'nSentences': 3, // `nSentences` controls the number of sentences from the original text included in the abstact
-		'exclude': ['polar', 'bear'], // sum.js allows you to exclude from the final abstract ALL sentences that contain any of the words in the `exclude` param
-		'emphasise': ['magic'] // forces sum.js to include in the summary the centences that contain any the words specified by `emphasise` param.
+		/**
+		 * `corpus`: String - is the string you want to summarize
+		 */
+		'corpus': anotherBigString,
+
+		/** 
+		 * `nSentences`: Number - controls the number of sentences from the original text included in the abstact
+		 */
+		'nSentences': 3,
+
+		/** 
+		 * `nWords`: Number - controls the length in words of the nGram output. Output might be larger as some words are ignored in the algorithm but present in the abstract, for ex. prepositions. When `nWords` is set, `nSentences` is ignored
+		 */
+		'nWords': 5,
+		
+		/**
+		 * `exclude`: Array[String] - sum.js allows you to exclude from the final abstract, sentences or nGrams that contain any of the words in the `exclude` param
+		 */
+		'exclude': ['polar', 'bear'], 
+
+		/**
+		 * `emphasise`: Array[String] - forces sum.js to include in the summary the sentences or nGrams that contain any the words specified by `emphasise` param.
+		 */
+		'emphasise': ['magic'] 
 	});
 
 
@@ -48,9 +68,19 @@ Running tests
 =============
 Run /tests/browser/specrunner.html in your favourite browser.
 
-To run node tests, make sure you have vows installed and run
+To run node tests, make sure you have [vows.js](http://vowsjs.org) installed then run
 
 	vows ./tests/node/sum.js 
+
+
+Goals
+=====
+
+This library is intended to be fully `embeddable`. It's purpose is to be used primarly on the `client-side`. 
+It should be `self-contained` so no API calls to external services.
+It should be as `light` as possible, both in terms of code size and dependencies and above all it must be `fast`.
+Because of these constraints, the algorithm used is purely statistical, using [TF IDF](http://en.wikipedia.org/wiki/Tf*idf) to calculate abstracts.
+Other methods of text summarization proposed by researchers in [NLP](http://en.wikipedia.org/wiki/Natural_language_processing) and [ML](http://en.wikipedia.org/wiki/Machine_learning) produce better results but are not (to my best of knowledge) practical in the browser context as many of them require intense computation to produce their output.
 
 	
 TODO
@@ -59,6 +89,8 @@ TODO
 2. currenty the output does not preserve the ending chars of the original sentences
 3. make the lib more plugable, e.g allow plugin of custom algorithms, string cleaning rutines, etc.
 4. better control for the length of the summary, by words, by letters
+5. add more algorithms to calculate abstracts
+6. Make the library's inner utility functions available as some of them might be usefull
 
 
 Licence

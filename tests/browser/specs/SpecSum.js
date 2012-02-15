@@ -32,5 +32,13 @@ describe( 'summarize.js basic output test', function () {
 			expect(actual.sentences.length).toEqual( expected );
 		});
 	});
-}) ;
+});
+describe( 'test nWords params in action', function () {
+	corpora.forEach( function (corpus) {
+		it( 'should calculate the summary', function () {
+			var actual = sum({ 'corpus': corpus.text, 'nWords': 5 });
+			expect(actual.sentences.length).not.toEqual('');
+		});
+	});
+});
 //TODO add tests to validate correctness of the actual output
