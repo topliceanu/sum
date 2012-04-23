@@ -19,6 +19,6 @@
 		"vows": "0.6.1"
 	},
 	"scripts": {
-		"test": "vows --spec --isolate"
+		"test": "vows --spec --isolate ./tests/node/sum.js"
 	}
 }
