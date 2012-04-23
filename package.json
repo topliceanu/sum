@@ -17,5 +17,8 @@
 		"underscore.string": "~2.0.0",
 		"porter-stemmer": "~0.9.1",
 		"vows": "0.6.1"
+	},
+	"scripts": {
+		"test": "vows --spec --isolate"
 	}
 }
