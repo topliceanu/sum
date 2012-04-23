@@ -10,6 +10,8 @@
 Sum.js
 ============
 
+[![Build Status](https://secure.travis-ci.org/topliceanu/text-summarization.png)](http://travis-ci.org/topliceanu/text-summarization)
+
 A simple function for summarizing text e.g. for automatically determining the sentences that are most relevant to the context of the corpus.
 This library depends on the [underscore](http://documentcloud.github.com/underscore/), [underscore.string](http://epeli.github.com/underscore.string/) and [porter-stemmer](https://github.com/jedp/porter-stemmer) for the moment
 
