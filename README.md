@@ -78,6 +78,9 @@ var abstract = sum({
      */
     'emphasise': ['magic']
 });
+
+//`abstract` is an object with format {'sentences':Array<String>, 'summary':String} where summary is just the concatenation of the sentences, for convenience.
+console.log("The short version of corpus is ", abstract.summary);
 ```
 
 
