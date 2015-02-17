@@ -1,24 +1,40 @@
 {
-	"author": "alex.topliceanu <alext@vibetrace.com> (https://github.com/topliceanu)",
-	"name": "sum",
-	"description": "text summarization utility",
-	"version": "0.1.1",
-	"homepage": "https://github.com/topliceanu/text-summarization",
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:topliceanu/text-summarization.git"
-	},
-	"main": "./sum.js",
-	"engines": {
-		"node": ">0.4.12"
-	},
-	"dependencies": {
-		"underscore": "~1.3.1",
-		"underscore.string": "~2.0.0",
-		"porter-stemmer": "~0.9.1",
-		"vows": "0.6.1"
-	},
-	"scripts": {
-		"test": "vows --spec --isolate ./tests/node/sum.js"
-	}
+    "name": "sum",
+    "version": "0.1.2",
+    "description": "text summarization utility",
+    "homepage": "https://github.com/topliceanu/text-summarization",
+    "license": "MIT",
+    "keywords": [
+        "summarization",
+        "nlp",
+        "stemmer",
+        "stop-words",
+        "express"
+    ],
+    "author": "alex.topliceanu <alexandru.topliceanu@gmail.com> (https://github.com/topliceanu)",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com:topliceanu/text-summarization.git"
+    },
+    "bugs": {
+        "url": "https://github.com/topliceanu/text-summarization/issues"
+    },
+    "main": "./sum.js",
+    "scripts": {
+        "test": "./node_modules/.bin/vows --spec --isolate ./tests/node/sum.js",
+        "lint": "./node_modules/.bin/jshint sum.js"
+    },
+    "dependencies": {
+        "underscore": "1.7.0",
+        "underscore.string": "3.0.3",
+        "porter-stemmer": "0.9.1"
+    },
+    "devDependencies": {
+        "vows": "0.8.1",
+        "jshint": "2.6.0"
+    },
+    "optionalDependencies": {},
+    "engines": {
+        "node": ">0.10.0"
+    }
 }

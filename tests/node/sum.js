@@ -7,33 +7,33 @@ var corpus = "MEDICINE Testing, Testing Unusual proteins could improve cancer di
 vows
 .describe( 'testing sum.js' )
 .addBatch({
-	'when summarizing a text': {
-		topic: function () {
-			var s = sum({ 
-				'corpus': corpus,
-				'nSentences': 3
-			});
-			return s.summary;
-		},
-		'it should output the abstract containing the most relevant sentences for the meaning of the initial text': function (error, summary) {
-			assert.ifError( error );
-			assert.isString( summary );
-		}
-	}
+    'when summarizing a text': {
+        topic: function () {
+            var s = sum({
+                'corpus': corpus,
+                'nSentences': 3
+            });
+            return s.summary;
+        },
+        'it should output the abstract containing the most relevant sentences for the meaning of the initial text': function (error, summary) {
+            assert.ifError( error );
+            assert.isString( summary );
+        }
+    }
 })
 .addBatch({
-	'when summarizing a text': {
-		topic: function () {
-			var s = sum({ 
-				'corpus': corpus,
-				'nWords': 5
-			});
-			return s.summary;
-		},
-		'it should output the abstract containing the most relevant sentences for the meaning of the initial text': function (error, summary) {
-			assert.ifError( error );
-			assert.isString( summary );
-		}
-	}
+    'when summarizing a text': {
+        topic: function () {
+            var s = sum({
+                'corpus': corpus,
+                'nWords': 5
+            });
+            return s.summary;
+        },
+        'it should output the abstract containing the most relevant sentences for the meaning of the initial text': function (error, summary) {
+            assert.ifError( error );
+            assert.isString( summary );
+        }
+    }
 })
 .export(module);
