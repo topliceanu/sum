@@ -9,67 +9,82 @@
 
 ## Sum.js
 
-[![Build Status](https://secure.travis-ci.org/topliceanu/text-summarization.png)](http://travis-ci.org/topliceanu/text-summarization)
+[![NPM](https://nodei.co/npm/sum.png?downloads=true&stars=true)](https://nodei.co/npm/sum/)
+
+[![NPM](https://nodei.co/npm-dl/sum.png?months=12)](https://nodei.co/npm-dl/sum/)
+
+| Indicator              |                                                                          |
+|:-----------------------|:-------------------------------------------------------------------------|
+| continuous integration | [![Build Status](https://travis-ci.org/topliceanu/sum.svg?branch=master)](https://travis-ci.org/topliceanu/sum) |
+| dependency management  | [![Dependency Status](https://david-dm.org/topliceanu/sum.svg?style=flat)](https://david-dm.org/topliceanu/sum) [![devDependency Status](https://david-dm.org/topliceanu/sum/dev-status.svg?style=flat)](https://david-dm.org/topliceanu/sum#info=devDependencies) |
+| change log             | [CHANGELOG](https://github.com/topliceanu/sum/blob/master/CHANGELOG.md) [Releases](https://github.com/topliceanu/sum/releases) |
 
 A simple function for summarizing text e.g. for automatically determining the sentences that are most relevant to the context of the corpus.
-This library depends on the [underscore](http://documentcloud.github.com/underscore/), [underscore.string](http://epeli.github.com/underscore.string/) and [porter-stemmer](https://github.com/jedp/porter-stemmer) for the moment
+This library depends on the [underscore](http://documentcloud.github.com/underscore/), [underscore.string](http://epeli.github.com/underscore.string/) and [porter-stemmer](https://github.com/jedp/porter-stemmer).
 
 ## Install in node.js
 
-	sudo npm install -g sum
+```bash
+sudo npm install -g sum
+```
 
 ## Install in browser
-	<script src="/lib/underscore.js"></script>
-	<script src="/lib/underscore.string.js"></script>
-	<script src="/lib/porter-stemmer.js"></script>
-	<script src="/sum.js"></script>
 
+```html
+<script src="/lib/underscore.js"></script>
+<script src="/lib/underscore.string.js"></script>
+<script src="/lib/porter-stemmer.js"></script>
+<script src="/sum.js"></script>
+```
 
 ## Quick Start
-	var sum = require( 'sum' );
-	var bigString = "....";
-	var abstract = sum({ 'corpus': bigString });
-    // `abstract` is an object w/ format `{"summary":String, "sentences":Array<String>}`
-    // where summary is the concatenation of the array of sentences.
 
+```javascript
+var sum = require( 'sum' );
+var bigString = "....";
+var abstract = sum({ 'corpus': bigString });
+// `abstract` is an object w/ format `{"summary":String, "sentences":Array<String>}`
+// where summary is the concatenation of the array of sentences.
+```
 
 ## Further Options
-	var sum = require( 'sum' );
-	var anotherBigString = "...";
-	var abstract = sum({
-		/**
-		 * `corpus`: String - is the string you want to summarize
-		 */
-		'corpus': anotherBigString,
 
-		/**
-		 * `nSentences`: Number - controls the number of sentences from the original text included in the abstact
-		 */
-		'nSentences': 3,
+```javascript
+var sum = require( 'sum' );
+var anotherBigString = "...";
+var abstract = sum({
+    /**
+     * `corpus`: String - is the string you want to summarize
+     */
+    'corpus': anotherBigString,
 
-		/**
-		 * `nWords`: Number - controls the length in words of the nGram output. Output might be larger as some words are ignored in the algorithm but present in the abstract, for ex. prepositions. When `nWords` is set, `nSentences` is ignored
-		 */
-		'nWords': 5,
+    /**
+     * `nSentences`: Number - controls the number of sentences from the original text included in the abstact
+     */
+    'nSentences': 3,
 
-		/**
-		 * `exclude`: Array[String] - sum.js allows you to exclude from the final abstract, sentences or nGrams that contain any of the words in the `exclude` param
-		 */
-		'exclude': ['polar', 'bear'],
+    /**
+     * `nWords`: Number - controls the length in words of the nGram output. Output might be larger as some words are ignored in the algorithm but present in the abstract, for ex. prepositions. When `nWords` is set, `nSentences` is ignored
+     */
+    'nWords': 5,
 
-		/**
-		 * `emphasise`: Array[String] - forces sum.js to include in the summary the sentences or nGrams that contain any the words specified by `emphasise` param.
-		 */
-		'emphasise': ['magic']
-	});
+    /**
+     * `exclude`: Array[String] - sum.js allows you to exclude from the final abstract, sentences or nGrams that contain any of the words in the `exclude` param
+     */
+    'exclude': ['polar', 'bear'],
+
+    /**
+     * `emphasise`: Array[String] - forces sum.js to include in the summary the sentences or nGrams that contain any the words specified by `emphasise` param.
+     */
+    'emphasise': ['magic']
+});
+```
 
 
 ## Running tests
-Run /tests/browser/specrunner.html in your favourite browser.
+Run `/tests/browser/specrunner.html` in your favourite browser.
 
-To run node tests, make sure you have [vows.js](http://vowsjs.org) installed then run
-
-	vows ./tests/node/sum.js
+To run node tests, run `npm run test`.
 
 
 ## Goals
@@ -94,7 +109,7 @@ Other methods of text summarization proposed by researchers in [NLP](http://en.w
 
 (The MIT License)
 
-Copyright (c) 2009-2011 Alex Topliceanu <alexandru.topliceanu@gmail.com>
+Copyright (c) Alex Topliceanu <alexandru.topliceanu@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
