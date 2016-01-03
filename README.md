@@ -1,4 +1,5 @@
 ```
+    _____                       _
    / ____|                     (_)
   | (___   _   _  _ __ ___      _  ___
    \___ \ | | | || '_ ` _ \    | |/ __|
@@ -7,6 +8,7 @@
                               _/ |
                              |__/
 ```
+
 ## Sum.js
 
 [![NPM](https://nodei.co/npm/sum.png?downloads=true&stars=true)](https://nodei.co/npm/sum/)

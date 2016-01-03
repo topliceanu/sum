@@ -1,8 +1,8 @@
 {
     "name": "sum",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "text summarization utility",
-    "homepage": "https://github.com/topliceanu/text-summarization",
+    "homepage": "https://github.com/topliceanu/sum",
     "license": "MIT",
     "keywords": [
         "summarization",
@@ -14,10 +14,10 @@
     "author": "alex.topliceanu <alexandru.topliceanu@gmail.com> (https://github.com/topliceanu)",
     "repository": {
         "type": "git",
-        "url": "git://github.com:topliceanu/text-summarization.git"
+        "url": "git://github.com/topliceanu/sum.git"
     },
     "bugs": {
-        "url": "https://github.com/topliceanu/text-summarization/issues"
+        "url": "https://github.com/topliceanu/sum/issues"
     },
     "main": "./sum.js",
     "scripts": {
