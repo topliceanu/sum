@@ -1,6 +1,6 @@
 {
     "name": "sum",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "text summarization utility",
     "homepage": "https://github.com/topliceanu/text-summarization",
     "license": "MIT",
